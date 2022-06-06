@@ -2,7 +2,7 @@
 
 void main()
 {
-	int choix;
+	int choix,v;
 	List l = NULL;
 
 	do {
@@ -18,25 +18,29 @@ void main()
 		switch (choix)
 		{
 			case 1: {
-
+				printf("Donner une valeur : ");
+				scanf_s("%d", &v);
+				ajouter(&l, v);
 			};break;
 			case 2: {
-
+				afficher(l);
 			};break;
 			case 3: {
-
+				tri_bulle(&l);
 			};break;
 			case 4: {
-
+				printf("Donner une valeur : ");
+				scanf_s("%d", &v);
+				supprimer(&l, v);
 			};break;
 			case 5: {
-
+				vider(&l);
 			};break;
 			case 6: {
-
+				printf("Merci pour votre passage \n");
 			};break;
 
-			default:printf("Veuillez choisir un numéro entre 1 et 6");
+			default:printf("Veuillez choisir un numéro entre 1 et 6 \n");
 		}
 
 
